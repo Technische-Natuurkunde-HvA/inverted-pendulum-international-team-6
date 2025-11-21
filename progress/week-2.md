@@ -15,7 +15,7 @@ For example:
 
 
 #### Example:
-
+this is the code to getting the sensor to record the angle, to use this you must close the serial monitor before running or else it will give an access denied error.
 ```python
 import serial
 import time
