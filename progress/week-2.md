@@ -16,18 +16,76 @@ For example:
 
 #### Example:
 
-```c
-// Header file for input/output functions
-#include <stdio.h>
+```python
+import serial
+import time
+import csv
+import matplotlib.pyplot as plt
 
-// Main function: entry point for execution
-int main() {
+# ---------- SETTINGS ----------
+PORT = "COM3"       # change to your Arduino port (COM4, COM5, ...)
+BAUD = 11500         # MUST match Serial.begin() on Arduino
+DURATION = 10       # seconds to record (2–10 sec is fine)
+CSV_FILE = "as5600_data.csv"
+PLOT_FILE = "as5600_plot.png"
+# ------------------------------
 
-    // Print a message to the console
-    printf("Hello World");
+def record_data():
+    print(f"Opening {PORT} at {BAUD} baud...")
+    ser = serial.Serial(PORT, BAUD, timeout=1)
+    time.sleep(2)  # Arduino reset time
 
-    return 0;
-}
+    start_time = time.time()
+    print(f"Recording for {DURATION} seconds...")
+
+    with open(CSV_FILE, "w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["time_s", "angle_deg"])
+
+        while time.time() - start_time < DURATION:
+            line = ser.readline().decode("utf-8").strip()
+            if not line:
+                continue
+
+            try:
+                angle = float(line)   # one angle per line from Arduino
+                t = time.time() - start_time
+                writer.writerow([t, angle])
+                print(t, angle)
+            except ValueError:
+                pass  # skip garbage lines
+
+    ser.close()
+    print("Done. Data saved to", CSV_FILE)
+
+
+def plot_data():
+    times = []
+    angles = []
+
+    with open(CSV_FILE, "r") as f:
+        reader = csv.reader(f)
+        next(reader)  # skip header
+        for row in reader:
+            times.append(float(row[0]))
+            angles.append(float(row[1]))
+
+    plt.figure(figsize=(8, 4))
+    plt.plot(times, angles)
+    plt.xlabel("Time (s)")
+    plt.ylabel("Angle (deg)")
+    plt.title("AS5600 angle vs time")
+    plt.grid(True)
+    plt.tight_layout()
+    plt.savefig(PLOT_FILE)
+    print("Plot saved as", PLOT_FILE)
+    plt.show()
+
+
+if __name__ == "__main__":
+    record_data()
+    plot_data()
+
 ``` 
 ## 3. Results
 
