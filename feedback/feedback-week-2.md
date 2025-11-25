@@ -1,0 +1,4 @@
+- Your weekly progress report is very good. Great you included a picture of the pendulum, some code, and graphs. The text is clear.
+- Wonderful you have included a python script which both saves and plots the data. Please also save this code in the ‘code folder’. In general, you should upload all your code to this folder on GitHub.
+- Good you also uploaded some videos of the pendulum.
+- Any code for the motor and encoder is lacking entirely. How do you intend to automize the measurements of motor RPM?
