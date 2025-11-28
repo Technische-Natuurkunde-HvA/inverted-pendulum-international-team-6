@@ -8,7 +8,7 @@ const int ENA = 9;
 
 unsigned long lastRead = 0;
 unsigned long motorTimer = 0;
-int fase = 0;   // 0 = direita, 1 = pausa, 2 = esquerda, 3 = pausa
+int fase = 0;   // 0 = right, 1 = stop, 2 = left, 3 = stop
 
 uint16_t readAS5600() {
   Wire.beginTransmission(0x36);
@@ -36,7 +36,7 @@ void setup() {
 }
 
 void loop() {
-  // leitura contínua do ângulo
+  // Reading Angle
   if (millis() - lastRead >= 10) {
     lastRead = millis();
     uint16_t ang = readAS5600();
@@ -45,9 +45,9 @@ void loop() {
 
   unsigned long agora = millis();
 
-  // controlo não-bloqueante do motor
+  // Control of the Motor
   switch (fase) {
-    case 0: // rodar direita 2 s
+    case 0: // rotate right 2 s
       digitalWrite(IN1, HIGH);
       digitalWrite(IN2, LOW);
       analogWrite(ENA, PWM_X);
@@ -57,7 +57,7 @@ void loop() {
       }
       break;
 
-    case 1: // parar 1 s
+    case 1: // stop 1 s
       analogWrite(ENA, 0);
       if (agora - motorTimer > 1000) {
         motorTimer = agora;
@@ -65,7 +65,7 @@ void loop() {
       }
       break;
 
-    case 2: // rodar esquerda 2 s
+    case 2: // rotate left 2 s
       digitalWrite(IN1, LOW);
       digitalWrite(IN2, HIGH);
       analogWrite(ENA, PWM_X);
@@ -75,7 +75,7 @@ void loop() {
       }
       break;
 
-    case 3: // parar 1 s
+    case 3: // stop 1 s
       analogWrite(ENA, 0);
       if (agora - motorTimer > 1000) {
         motorTimer = agora;
