@@ -16,9 +16,9 @@ double rpm_wheel = 0;        // measured frequency
 double output = 0;           // motor output value (start at 0)
 
 // <<< ADDED: variables for stepping output
-const int outputStep = 20;         // step size per update (change if you want)
-const int outputMax  = 100;        // max PWM
-const int outputMin  = -100;       // min PWM
+const int outputStep = 160;         // step size per update (change if you want)
+const int outputMax  = 160;        // max PWM
+const int outputMin  = -160;       // min PWM
 unsigned long lastOutputUpdate = 0;
 const unsigned long outputUpdateInterval = 1000; // ms between steps
 // <<< END ADDED
