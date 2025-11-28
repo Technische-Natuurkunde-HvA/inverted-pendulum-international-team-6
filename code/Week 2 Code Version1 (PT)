@@ -1,0 +1,86 @@
+#include <Wire.h>
+
+const int PWM_X = 180;
+
+const int IN1 = 10;
+const int IN2 = 11;
+const int ENA = 9;
+
+unsigned long lastRead = 0;
+unsigned long motorTimer = 0;
+int fase = 0;   // 0 = direita, 1 = pausa, 2 = esquerda, 3 = pausa
+
+uint16_t readAS5600() {
+  Wire.beginTransmission(0x36);
+  Wire.write(0x0C);
+  Wire.endTransmission();
+  Wire.requestFrom(0x36, 2);
+
+  if (Wire.available() == 2) {
+    uint16_t high = Wire.read();
+    uint16_t low  = Wire.read();
+    return (high << 8) | low;
+  }
+  return 0;
+}
+
+void setup() {
+  pinMode(IN1, OUTPUT);
+  pinMode(IN2, OUTPUT);
+  pinMode(ENA, OUTPUT);
+
+  Wire.begin();
+  Serial.begin(115200);
+
+  motorTimer = millis();
+}
+
+void loop() {
+  // leitura contínua do ângulo
+  if (millis() - lastRead >= 10) {
+    lastRead = millis();
+    uint16_t ang = readAS5600();
+    Serial.println(ang);
+  }
+
+  unsigned long agora = millis();
+
+  // controlo não-bloqueante do motor
+  switch (fase) {
+    case 0: // rodar direita 2 s
+      digitalWrite(IN1, HIGH);
+      digitalWrite(IN2, LOW);
+      analogWrite(ENA, PWM_X);
+      if (agora - motorTimer > 2000) {
+        motorTimer = agora;
+        fase = 1;
+      }
+      break;
+
+    case 1: // parar 1 s
+      analogWrite(ENA, 0);
+      if (agora - motorTimer > 1000) {
+        motorTimer = agora;
+        fase = 2;
+      }
+      break;
+
+    case 2: // rodar esquerda 2 s
+      digitalWrite(IN1, LOW);
+      digitalWrite(IN2, HIGH);
+      analogWrite(ENA, PWM_X);
+      if (agora - motorTimer > 2000) {
+        motorTimer = agora;
+        fase = 3;
+      }
+      break;
+
+    case 3: // parar 1 s
+      analogWrite(ENA, 0);
+      if (agora - motorTimer > 1000) {
+        motorTimer = agora;
+        fase = 0;
+      }
+      break;
+  }
+}
