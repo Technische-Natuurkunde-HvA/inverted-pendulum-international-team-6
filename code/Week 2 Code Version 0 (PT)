@@ -1,9 +1,9 @@
-// Constante para definir a rotação (PWM)
-const int PWM_X = 160;   // valor entre 0 e 255
+//PWM
+const int PWM_X = 160;   // 0 e 255
 
 // Pinos da ponte H
-const int IN1 = 10;   // direção 1
-const int IN2 = 11;  // direção 2
+const int IN1 = 10;   // direction 1
+const int IN2 = 11;  // direction 2
 const int ENA = 9;   // PWM (enable)
 
 void setup() {
@@ -13,23 +13,23 @@ void setup() {
 }
 
 void loop() {
-  // Rodar para a direita
+  // Rotate to right
   digitalWrite(IN1, HIGH);
   digitalWrite(IN2, LOW);
   analogWrite(ENA, PWM_X);
-  delay(800); // tempo rodando
+  delay(800); // time
 
-  // Parar
+  // stop
   analogWrite(ENA, 0);
   delay(1200);
 
-  // Rodar para a esquerda
+  // Rotate to Left
   digitalWrite(IN1, LOW);
   digitalWrite(IN2, HIGH);
   analogWrite(ENA, PWM_X);
   delay(800);
 
-  // Parar
+  // Stop
   analogWrite(ENA, 0);
   delay(1200);
 }
