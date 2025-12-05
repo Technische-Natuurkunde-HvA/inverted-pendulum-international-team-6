@@ -8,14 +8,14 @@ The pendulum will also restabilise itself after you give it a little push (see v
 The code had been changed so that it can stabilise the pendulum using the magnetic sensor to state the current position.
 The 3 values for our parameters differ between the Dutch and Portugese group, since we have different wheels (at least for now).
 
-Here are the parameters for the spare wheel used in Portugal (see `visuals/videos/WhatsApp Video 2025-12-2 at 14.23.48.mp4`):
+Here are the parameters for the spare wheel used in Portugal (`visuals/videos/WhatsApp Video 2025-12-2 at 14.23.48.mp4`):
 ```
 K_p = 30.0
 K_i = 5.0
 K_d = 1.5
 ```
 
-And these are the parameters for our official wheel (see `visuals/videos/Pendulum_stable_V1.mp4`):
+And these are the parameters for our official wheel (`visuals/videos/Pendulum_stable_V1.mp4`):
 ```
 K_p = 35.0
 K_i = 1.0
