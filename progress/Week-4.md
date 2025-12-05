@@ -141,7 +141,7 @@ Our results will be shown in the videos below, furthermore we have not decided w
 
 Progress Portugal:
 
-[Ver vídeo](visuals/videos/WhatsApp%20Video%202025-12-2%20at%2014.23.48.mp4)
+[Ver vídeo](visuals/videos/Progress_Week4.mp4)
 
 
 Progress Netherlands:
