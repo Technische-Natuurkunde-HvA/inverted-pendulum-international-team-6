@@ -137,7 +137,15 @@ void readAndPrintAngle() {
 ```
 
 ## 3. Results
-Our results have been shown in the code section above, furthermore we have not decided which additional challenge we are going to choose for next week.
+Our results will be shown in the videos below, furthermore we have not decided which additional challenge we are going to choose for next week.
+
+Progress Portugal:
+
+./visuals/videos/WhatsApp Video 2025-12-2 at 14.23.48.mp4
+
+Progress Netherlands:
+
+./visuals/videos/Pendulum_stable_V1.mp4
 
 
 
