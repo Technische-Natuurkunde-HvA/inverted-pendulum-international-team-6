@@ -141,11 +141,13 @@ Our results will be shown in the videos below, furthermore we have not decided w
 
 Progress Portugal:
 
-./visuals/videos/WhatsApp Video 2025-12-2 at 14.23.48.mp4
+[Ver vídeo](visuals/videos/WhatsApp%20Video%202025-12-2%20at%2014.23.48.mp4)
+
 
 Progress Netherlands:
 
-./visuals/videos/Pendulum_stable_V1.mp4
+[Ver vídeo](visuals/videos/Pendulum_stable_V1.mp4)
+
 
 
 
