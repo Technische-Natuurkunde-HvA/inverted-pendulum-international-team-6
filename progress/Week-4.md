@@ -23,7 +23,7 @@ K_d = 1.0
 ```
 
 The code that we used to implement this PID values is:
-```python
+```c
 
 // for more information on the PID library: 
 // http://brettbeauregard.com/blog/2011/04/improving-the-beginners-pid-introduction/
