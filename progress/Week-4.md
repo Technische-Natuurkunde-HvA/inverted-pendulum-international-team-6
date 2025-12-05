@@ -1,23 +1,8 @@
-# About this document
-
-This is a team document where you record your weekly progress. It is written in Markdown, which allows you to format content in a simple and readable way. The document is rendered directly in GitHub without the need for a compiler (unlike LaTeX). The syntax is relatively easy. An overview of commonly used Markdown syntax can be found here:  
-https://www.markdownguide.org/basic-syntax/
-
-Below you find an example of the sections that must be included in each weekly progress report.
-
-Use the **same document for all weeks**. For each week, use the **same headers and subheaders**.
-
-Use the GitHub repository to store important project files (code, visuals including videos and figures, data, etc.). If necessary refer to those files in this document using a hyperlink. 
-
----
-
 # Week 4
 
 ## 1. Progress description
-Describe the progress of your work for this week. Keep it clear and concise.
-
 This week we managed to stabilise the pendulum using and when it is stable, the position of the arm is almost perfectly vertical. 
-The pendulum will also restabilise itself after you give it a little push (see visuals/videos/Pendulum_stable_V1).
+The pendulum will also restabilise itself after you give it a little push (see visuals/videos/Pendulum_stable_V1.mp4).
 
 ## 2. Code
 
