@@ -15,7 +15,7 @@ K_i = 5.0
 K_d = 1.5
 ```
 
-And these are the parameters for our official wheel:
+And these are the parameters for our official wheel seen in the referenced video in progress description:
 ```
 K_p = 35.0
 K_i = 1.0
