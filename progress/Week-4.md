@@ -24,10 +24,9 @@ K_d = 1.0
 
 
 ## 3. Results
-Present your results here. This may include tables, figures, or charts.
-Add charts and other visuals to the `visuals` folder in the GitHub repository and reference them in this document if needed.
+Our results have been shown in the code section above, furthermore we have not decided which additional challenge we are going to choose for next week.
+
 
 
 ## 4. Reflection 
-What did you learn this week?
-What should you focus on or improve in the coming weeks of the project?
+This week we achieved stabilising the pendulum and this went a lot faster than expected.
