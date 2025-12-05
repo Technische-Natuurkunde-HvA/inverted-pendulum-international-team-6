@@ -11,10 +11,13 @@ Use the GitHub repository to store important project files (code, visuals includ
 
 ---
 
-# Week 1
+# Week 4
 
 ## 1. Progress description
 Describe the progress of your work for this week. Keep it clear and concise.
+
+This week we managed to stabilise the pendulum using and when it is stable, the position of the arm is almost perfectly vertical. 
+The pendulum will also restabilise itself after you give it a little push. 
 
 ## 2. Code
 
