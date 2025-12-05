@@ -141,12 +141,14 @@ Our results will be shown in the videos below, furthermore we have not decided w
 
 Progress Portugal:
 
-[![Ver vídeo](visuals/videos/thumb.png)](visuals/videos/Progress_Week4.mp4)
+[Ver vídeo](../visuals/videos/Progress_Week4.mp4)
+
 
 
 Progress Netherlands:
 
-[![Ver vídeo](visuals/videos/thumb.png)](visuals/videos/Pendulum_stable_V1.mp4)
+[Ver vídeo](../visuals/videos/Pendulum_stable_V1.mp4)
+
 
 
 
