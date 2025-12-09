@@ -1,0 +1,8 @@
+- Your weekly progress report gives a decent overview of your achievements this week. A more in-depth reflection would have been better though.
+- Excellent you have included the Arduino sketch in your weekly progress report. However, please write all comments in English! As an international team, you should collaborate on the same code.
+- You have implemented some correction for the motor’s dead zone, but this might not be the most adequate solution.
+- Great you give a clear overview of your values for the PID parameters.
+- Wonderful you have included two links to video’s.
+- Please move the “ramp up increment” sketch to the correct folder or delete it. In general, you should reorganize your repository by removing clutter.
+- When tuning the parameters make sure you have a systematic approach. Decide on which parameters to change, observe the results and based on the results, decide which parameter to change next and by how much.
+- Make sure that you report on the process and intermediate results. Explain how you made decisions and why, instead of just mentioning the final numbers.
