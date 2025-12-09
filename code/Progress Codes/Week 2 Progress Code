@@ -1,0 +1,102 @@
+// Motor control pins
+const int motorPin1 = 10; // IN1 
+const int motorPin2 = 11; // IN2 
+const int enablePin = 9;  // ENA (PWM pin for speed control)
+
+// Encoder pin
+const int encoderPin = 2; // use just one encoder pin for simplicity
+
+volatile int pulseCount = 0;  // pulse counter
+const int pulsesPerRevolution = 11; // pulses per rotation from each encoder wire
+
+unsigned long lastTime = 0;   // store last time measurement
+double frequency = 0; 
+double rpm_wheel = 0;        // measured frequency
+
+double output = 0;           // motor output value (start at 0)
+
+// <<< ADDED: variables for stepping output
+const int outputStep = 160;         // step size per update (change if you want)
+const int outputMax  = 160;        // max PWM
+const int outputMin  = -160;       // min PWM
+unsigned long lastOutputUpdate = 0;
+const unsigned long outputUpdateInterval = 1000; // ms between steps
+// <<< END ADDED
+
+void countPulse();
+
+void setup() {
+  pinMode(motorPin1, OUTPUT);
+  pinMode(motorPin2, OUTPUT);
+  pinMode(enablePin, OUTPUT);
+
+  pinMode(encoderPin, INPUT_PULLUP); // 1 encoder input
+
+  attachInterrupt(digitalPinToInterrupt(encoderPin), countPulse, RISING);
+
+  Serial.begin(9600);
+  lastTime = millis();
+}
+
+void loop() {
+
+  // <<< ADDED: ramp output up and down step by step
+  if (millis() - lastOutputUpdate >= outputUpdateInterval) {
+    // Increase or decrease output depending on its current value
+    static bool increasing = true;  // true = ramp up, false = ramp down
+
+    if (increasing) {
+      output += outputStep;
+      if (output >= outputMax) {
+        output = outputMax;
+        increasing = false; // start going down
+      }
+    } else {
+      output -= outputStep;
+      if (output <= outputMin) {
+        output = outputMin;
+        increasing = true; // start going up
+      }
+    }
+
+    lastOutputUpdate = millis();
+  }
+  // <<< END ADDED
+
+
+  // Motor direction + speed
+  if (output > 0) {
+    digitalWrite(motorPin1, LOW);
+    digitalWrite(motorPin2, HIGH);
+  } else {
+    digitalWrite(motorPin1, HIGH);
+    digitalWrite(motorPin2, LOW);
+  }
+  analogWrite(enablePin, abs(output));  // PWM based on |output|
+
+  // Frequency calculation every 0.5 seconds
+  if (millis() - lastTime >= 500) {
+    noInterrupts();
+    int count = pulseCount;
+    pulseCount = 0;
+    interrupts();
+
+    frequency = count / (pulsesPerRevolution * 0.5); // frequency in Hz
+    rpm_wheel = (frequency / 9.6) * 60; 
+
+    Serial.print("Out: ");
+    Serial.print(output);
+    Serial.print("   Freq: ");
+    Serial.print(frequency);
+    Serial.print(" Hz   ");
+    Serial.print("rpm: ");
+    Serial.print(rpm_wheel);
+    Serial.println(" rpm");
+
+    lastTime = millis();
+  }
+}
+
+void countPulse() {
+  pulseCount++;  // increment each pulse
+}
