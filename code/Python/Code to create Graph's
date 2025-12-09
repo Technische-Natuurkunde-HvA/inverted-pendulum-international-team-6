@@ -1,0 +1,42 @@
+import serial
+import time
+import matplotlib.pyplot as plt
+
+port = "COM10"
+baud = 115200
+
+ser = serial.Serial(port, baud, timeout=1)
+time.sleep(2)
+
+times = []
+angles_deg = []
+
+t0 = time.time()
+
+print("Receiving data... (Ctrl+C to stop)")
+
+try:
+    while True:
+        line = ser.readline().decode().strip()
+        if line.isdigit():
+            ang_raw = int(line)           # 0–4095 (AS5600 raw output)
+            ang_deg = ang_raw * 360 / 4096
+
+            t = time.time() - t0
+
+            times.append(t)
+            angles_deg.append(ang_deg)
+
+            print(t, ang_deg)
+
+except KeyboardInterrupt:
+    pass
+
+ser.close()
+
+plt.plot(times, angles_deg)
+plt.xlabel("Time (s)")
+plt.ylabel("Angle (º)")
+plt.title("Angle vs Time")
+plt.grid(True)
+plt.show()
