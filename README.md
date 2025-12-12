@@ -1,4 +1,4 @@
-# Inverted Pendulum Project - Team 6#
+# Inverted Pendulum Project - Team 6 #
 
 This projectwas carried out by a colaboration of students from ISEL (Lisbon Higher Institute of Engineering) and the University of Aplied Ciences of Amesterdam and it focuses on building and controlling an inverted pendulum, this system requires continuous feedback to stay balanced. For that feedback it will be needed some sensors, such as the AS5600 magnetic angle sensor, and a DC motor, this motor will provide the torque needed to correct deviations from upright.
 
@@ -32,4 +32,16 @@ Within this folder are all of the progress reports done by the students througho
 
 This folder is divided in to two folders, one that contains the figures ([Figures Folder](/visuals/figures)) and another one with the videos taken of the pendulum ([Videos Folder](/visuals/videos)).
 
+---
+# 2. Code #
 
+The codes that are in the [Codes Folder](/code) are very simple it only needs to be copy and pasted in Arduino or the Python, but the one in the Additional challenges it is a bit different it is called a state machine so there will be two files in one code. 
+
+**How to use a state machine code:** This code is different first it needs to copy and pasted the first file in said folder and then in the arduino app the user will need to press the icon with the three points on the far right and choose "create new tab" to put the other file.
+
+⚠️ **Important:** In this process use always the terminologies that are in the name of the files. For example, when the user creates the new tab for the code said before it will be needed that the name of the file ends in ".h".
+
+---
+# 3. Repository Structure #
+
+![Diagram](../visuals/figures/structure.png)
