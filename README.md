@@ -44,4 +44,4 @@ The codes that are in the [Codes Folder](/code) are very simple it only needs to
 ---
 # 3. Repository Structure #
 
-![Diagram](../visuals/figures/structure.png)
+![Diagram](https://github.com/Technische-Natuurkunde-HvA/inverted-pendulum-international-team-6/blob/main/visuals/figures/structure.png)
