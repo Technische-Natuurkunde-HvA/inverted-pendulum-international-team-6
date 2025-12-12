@@ -26,4 +26,10 @@ It houses all of the feedback reports done by both institutions teachers.
 
 ## 1.3 [Progress Folder:](/progress) ##
 
-Within this folder are all of the progress reports done by the students 
+Within this folder are all of the progress reports done by the students throughout the weeks.
+
+## 1.4 [Visuals Folder:](/visuals) ##
+
+This folder is divided in to two folders, one that contains the figures ([Figures Folder](/visuals/figures)) and another one with the videos taken of the pendulum ([Videos Folder](/visuals/videos)).
+
+
