@@ -1,4 +1,4 @@
-## Inverted Pendulum Project ##
+## Inverted Pendulum Project - Team 6 ##
 
 # 1. Project Motivation
 
