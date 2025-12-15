@@ -1,3 +1,4 @@
+
 # Mechanical Setup #
 
 The mechanical structure is fully 3D-printed and designed to support an inverted pendulum stabilized by a reaction wheel. Its main components include:
