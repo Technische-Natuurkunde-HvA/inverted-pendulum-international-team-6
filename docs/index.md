@@ -10,6 +10,7 @@ The control theory behind it is based on predicting how the pendulum will move a
 
 Overall, the project is a practical demonstration of how engineers use mechanics, electronics, and smart algorithms to stabilize systems that would otherwise be impossible to balance on their own.
 
+---
 # 2. The Setup
 
 # Mechanical Setup #
@@ -34,7 +35,6 @@ All components are mounted on a rigid 3D-printed frame clamped to a table.
 
 The goal is to minimize unwanted movement or vibrations while the wheel spins at high speed.
 
----
 # Electronic Setup #
 
 The electronic system provides sensing, computing, power control, and safety.
@@ -82,6 +82,7 @@ A 12 V power supply feeds the motor driver and motor, while the Arduino is power
 
 ![Diagram](https://github.com/Technische-Natuurkunde-HvA/inverted-pendulum-international-team-6/blob/main/visuals/figures/Diagram%20of%20electrical%20connections.png)
 
+---
 # 3. Implementation
 
 ## 3.1 Arduino Control Software (`code/Progress_Codes/`)
@@ -90,6 +91,12 @@ The Arduino control software is located in the `code/` directory and is responsi
 
 A PID controller is implemented to stabilize the pendulum around its unstable equilibrium point. The proportional, integral, and derivative gains, as well as the reference setpoint, deadband, and actuator limits, are defined in the configuration file. This separation allows systematic tuning of the controller parameters and improves code readability.
 
+To understand how the PID works use this ilustration:
+
+![graph](https://github.com/Technische-Natuurkunde-HvA/inverted-pendulum-international-team-6/blob/main/visuals/figures/PID_Compensation_Animated.gif)
+
+⚠️ **Important:** The ilustration above is a graphic that represents of how changing the PID values will chance the force exerted by the engine over time. 
+
 At each control cycle, the Arduino reads the pendulum angle from the sensor and computes the control error with respect to the setpoint. The control law generates a control signal that is converted into a PWM output and applied to the motor through a motor driver. A minimum PWM threshold is used to compensate for motor dead zones and ensure reliable actuation.
 
 For monitoring and experimental analysis, the measured pendulum angle is transmitted to a host computer via serial communication at a baud rate of 9600 bps. This data stream enables external observation of the system dynamics without affecting the real-time control loop.
@@ -97,11 +104,12 @@ For monitoring and experimental analysis, the measured pendulum angle is transmi
 
 ## 3.2 Python Tools (`code/Python/`)
 
-Python is used as a post-processing and visualization tool for the inverted pendulum experiments. The script `Codigo_para_obter_dados_2.py`, located in the `code/` directory, establishes a serial connection with the Arduino using the `pyserial` library.
+Python is used as a post-processing and visualization tool for the inverted pendulum experiments. The script `Code_to_create_Graphs.py`, located in the `code/` directory, establishes a serial connection with the Arduino using the `pyserial` library.
 
 The script continuously receives the pendulum angle values sent by the Arduino and associates them with time stamps generated on the host computer. Basic data validation is performed to discard invalid serial data during acquisition.
 
 After the acquisition is stopped by the user, the recorded data is plotted using the `Matplotlib` library. The resulting angle-versus-time plots provide a clear representation of the system response and allow qualitative evaluation of stability and control performance. These results support further physical interpretation and analysis of the inverted pendulum dynamics.
 
 
-# Experiments and results 
+# 4. Experiments and results 
+
