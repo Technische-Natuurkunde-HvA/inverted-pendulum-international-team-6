@@ -65,4 +65,6 @@ This module allows the Arduino to:
 
 A 12 V power supply feeds the motor driver and motor, while the Arduino is powered either through USB or a regulated 5 V source.
 
-#
+# Diagram of all the connections 
+
+![Diagram](https://github.com/Technische-Natuurkunde-HvA/inverted-pendulum-international-team-6/blob/main/visuals/figures/Diagram%20of%20electrical%20connections.png)
