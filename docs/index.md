@@ -84,6 +84,24 @@ A 12 V power supply feeds the motor driver and motor, while the Arduino is power
 
 # 3. Implementation
 
+## 3.1 Arduino Control Software (`code/Progress_Codes/`)
+
+The Arduino control software is located in the `code/` directory and is responsible for the real-time control of the inverted pendulum system. The main program is implemented in the file `main.ino`, while the controller parameters and system constants are defined in `config.h`.
+
+A PID controller is implemented to stabilize the pendulum around its unstable equilibrium point. The proportional, integral, and derivative gains, as well as the reference setpoint, deadband, and actuator limits, are defined in the configuration file. This separation allows systematic tuning of the controller parameters and improves code readability.
+
+At each control cycle, the Arduino reads the pendulum angle from the sensor and computes the control error with respect to the setpoint. The control law generates a control signal that is converted into a PWM output and applied to the motor through a motor driver. A minimum PWM threshold is used to compensate for motor dead zones and ensure reliable actuation.
+
+For monitoring and experimental analysis, the measured pendulum angle is transmitted to a host computer via serial communication at a baud rate of 9600 bps. This data stream enables external observation of the system dynamics without affecting the real-time control loop.
 
 
+## 3.2 Python Tools (`code/Python/`)
 
+Python is used as a post-processing and visualization tool for the inverted pendulum experiments. The script `Codigo_para_obter_dados_2.py`, located in the `code/` directory, establishes a serial connection with the Arduino using the `pyserial` library.
+
+The script continuously receives the pendulum angle values sent by the Arduino and associates them with time stamps generated on the host computer. Basic data validation is performed to discard invalid serial data during acquisition.
+
+After the acquisition is stopped by the user, the recorded data is plotted using the `Matplotlib` library. The resulting angle-versus-time plots provide a clear representation of the system response and allow qualitative evaluation of stability and control performance. These results support further physical interpretation and analysis of the inverted pendulum dynamics.
+
+
+# Experiments and results 
