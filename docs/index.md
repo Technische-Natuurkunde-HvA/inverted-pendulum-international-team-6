@@ -82,6 +82,10 @@ A 12 V power supply feeds the motor driver and motor, while the Arduino is power
 
 ![Diagram](https://github.com/Technische-Natuurkunde-HvA/inverted-pendulum-international-team-6/blob/main/visuals/figures/Diagram%20of%20electrical%20connections.png)
 
+# Pendulum Assembly #
+
+![Photo]()
+
 ---
 # 3. Implementation
 
