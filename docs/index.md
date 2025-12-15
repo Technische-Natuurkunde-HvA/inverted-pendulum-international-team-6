@@ -1,6 +1,6 @@
 ## Inverted Pendulum Project ##
 
-## 1.Project Motivation
+## 1. Project Motivation
 
 The inverted pendulum project is interesting because it takes something that is naturally unstable and tries to balance it using intelligence and control. Imagine trying to keep a broomstick standing upright on your fingertip—it constantly wants to fall, so you must react quickly and precisely. Our project does the same thing, but with a small 3D-printed structure, sensors, electronics, and an Arduino program.
 
