@@ -1,6 +1,6 @@
 # Inverted Pendulum Project - Team 6 #
 
-This projectwas carried out by a colaboration of students from ISEL (Lisbon Higher Institute of Engineering) and the University of Aplied Ciences of Amesterdam and it focuses on building and controlling an inverted pendulum, this system requires continuous feedback to stay balanced. For that feedback it will be needed some sensors, such as the AS5600 magnetic angle sensor, and a DC motor, this motor will provide the torque needed to correct deviations from upright.
+This project was carried out by a colaboration of students from ISEL (Lisbon Higher Institute of Engineering) and the University of Aplied Ciences of Amesterdam and it focuses on building and controlling an inverted pendulum, this system requires continuous feedback to stay balanced. For that feedback it will be needed some sensors, such as the AS5600 magnetic angle sensor, and a DC motor, this motor will provide the torque needed to correct deviations from upright.
 
 ---
 
