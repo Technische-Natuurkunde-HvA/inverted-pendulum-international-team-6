@@ -117,3 +117,15 @@ After the acquisition is stopped by the user, the recorded data is plotted using
 
 # 4. Experiments and results 
 
+This section presents the experimental evaluation of the inverted pendulum system. Several tests were conducted to assess the controller’s ability to stabilize the pendulum under different conditions.
+
+The folowing graph is a angle vs time experiment to see how the AS5600 works:
+![graph](https://github.com/Technische-Natuurkunde-HvA/inverted-pendulum-international-team-6/blob/main/visuals/figures/WhatsApp%20Image%202025-11-21%20at%2017.07.28%20(1).jpeg)
+
+The Results obtained after 5 weeks can be seen in the next videos:
+
+![video](https://github.com/Technische-Natuurkunde-HvA/inverted-pendulum-international-team-6/blob/main/visuals/videos/Progress_Week4.mp4)
+
+![video](https://github.com/Technische-Natuurkunde-HvA/inverted-pendulum-international-team-6/blob/main/visuals/videos/Pendulum_stable_V1.mp4)
+
+
