@@ -1,4 +1,3 @@
-## Inverted Pendulum Project - Team 6 ##
 
 # 1. Project Motivation
 
@@ -54,7 +53,7 @@ This motor includes a built-in encoder, used to read the rotational speed and di
 
 There are two separate encoders, each with a specific function:
 
-- ## Motor Encoder (built into the JGA25-370)
+- ## Motor Encoder
 
 Measures the reaction wheel’s rotation speed and direction. This allows precise control of the wheel’s acceleration, which is what generates the stabilizing torque.
 
