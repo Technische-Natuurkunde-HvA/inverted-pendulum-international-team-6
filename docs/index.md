@@ -79,7 +79,7 @@ A 12 V power supply feeds the motor driver and motor, while the Arduino is power
 
 # Diagram of all the connections 
 
-![Diagram](https://github.com/Technische-Natuurkunde-HvA/inverted-pendulum-international-team-6/blob/main/visuals/figures/Diagram%20of%20electrical%20connections.png)
+![Diagram](https://github.com/Technische-Natuurkunde-HvA/inverted-pendulum-international-team-6/blob/main/visuals/figures/Diagram%20of%20electrical%20connections.png.png)
 
 # Pendulum Assembly #
 
@@ -98,7 +98,8 @@ To understand how the PID works use this ilustration:
 
 ![graph](https://github.com/Technische-Natuurkunde-HvA/inverted-pendulum-international-team-6/blob/main/visuals/figures/PID_Compensation_Animated.gif)
 
-⚠️ **Important:** The ilustration above is a graphic that represents of how changing the PID values will chance the force exerted by the engine over time. 
+> ⚠️ **Important:**
+> The ilustration above is a graphic that represents of how changing the PID values will chance the force exerted by the engine over time. 
 
 At each control cycle, the Arduino reads the pendulum angle from the sensor and computes the control error with respect to the setpoint. The control law generates a control signal that is converted into a PWM output and applied to the motor through a motor driver. A minimum PWM threshold is used to compensate for motor dead zones and ensure reliable actuation.
 
@@ -119,12 +120,60 @@ After the acquisition is stopped by the user, the recorded data is plotted using
 This section presents the experimental evaluation of the inverted pendulum system. Several tests were conducted to assess the controller’s ability to stabilize the pendulum under different conditions.
 
 The folowing graph is a angle vs time experiment to see how the AS5600 works:
+
 ![graph](https://github.com/Technische-Natuurkunde-HvA/inverted-pendulum-international-team-6/blob/main/visuals/figures/WhatsApp%20Image%202025-11-21%20at%2017.07.28%20(1).jpeg)
 
-The Results obtained after 5 weeks can be seen in the next videos:
+The Results obtained after 4 weeks can be seen in the next videos:
 
 ![video](https://github.com/Technische-Natuurkunde-HvA/inverted-pendulum-international-team-6/blob/main/visuals/videos/Progress_Week4.mp4)
 
 ![video](https://github.com/Technische-Natuurkunde-HvA/inverted-pendulum-international-team-6/blob/main/visuals/videos/Pendulum_stable_V1.mp4)
 
+As it can be seen in the video after approximately 4 weeks the main objective of the project was sucessfully achived. Because of that the team discussed and decided that the from the additional challenges given the next target would be to make the pendulum stabelize without counterweight. After a week of progress the results achieved can be seen in the next video:
 
+
+![video](https://github.com/Technische-Natuurkunde-HvA/inverted-pendulum-international-team-6/blob/main/visuals/videos/Additional%20Challenges/No_Counterweight_Pendulum.mp4)
+
+Some other challenges that were selected by the team were:
+- Improvement of Design;
+- Data Analysis;
+- Creation of a Second PID (This challenge was applied in the no counterweight case and the achivement of completing that challenge was part from the creation of the second pid, for better stabilization).
+
+The results of this three challenges can be seen in the next section.
+
+# 5. Additional Challenges
+
+For the improvement of the design it was created new parts that then were printed in a 3D Printer. This new parts give the pendulum more stabilization because of its design, and there are some extras, such as, to spaces to put the arduino and the L298N.
+
+![New Part 1](https://github.com/Technische-Natuurkunde-HvA/inverted-pendulum-international-team-6/blob/main/visuals/files_newparts/Braco%20pendulo.STL)
+
+![New Part 2](https://github.com/Technische-Natuurkunde-HvA/inverted-pendulum-international-team-6/blob/main/visuals/files_newparts/base.STL)
+
+The data Analysis challenge it was quite simple the team just created a new code that can be acessed by this link ([link](https://github.com/Technische-Natuurkunde-HvA/inverted-pendulum-international-team-6/tree/main/code/Additional_Challenges/Code%20Data%20Analysis))
+
+The creation of a second PID was basically dividing the PID in two, in the left side of the up right position there is a PID and on the right it's the same. The team decided to do this because some time in some experiments it could be seen that the wheel going to one side had more force than going to the other side. The code for this challenge can be acessed by the link ([link](https://github.com/Technische-Natuurkunde-HvA/inverted-pendulum-international-team-6/tree/main/code/Additional_Challenges/Code%20Pendulum%20Without%20Counterweight))
+
+# 6. Team and Credits
+
+## The students:
+- Duarte Anastácio
+- Angelo Russo
+- Nuno Mota
+- Ricardo Alves
+- Abdu Shehab
+
+## Supervisors 
+- Prof. Pedro Patrício
+- Prof. Manfred Niehus
+- Prof. Mark Bosman
+
+## Collaborating Institutions
+<img width="9395" height="3544" alt="image" src="https://github.com/user-attachments/assets/f2049736-7fcd-4bb5-99ca-cb2daf10934b" />
+
+<img width="600" height="301" alt="image" src="https://github.com/user-attachments/assets/e998bc3b-7ccf-4e0d-904b-552eeb3bff31" />
+
+# 7. Repository
+
+Project Repository:
+
+- [GitHub: inverted-pendulum-international-team-6](https://github.com/Technische-Natuurkunde-HvA/inverted-pendulum-international-team-6)
