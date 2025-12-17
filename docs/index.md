@@ -168,7 +168,9 @@ The creation of a second PID was basically dividing the PID in two, in the left 
 - Prof. Mark Bosman
 
 ## Collaborating Institutions
-<img width="9395" height="3544" alt="image" src="https://github.com/user-attachments/assets/f2049736-7fcd-4bb5-99ca-cb2daf10934b" />
+
+<img width="374" height="232" alt="image" src="https://github.com/user-attachments/assets/07495b6b-3467-4336-ac16-9d3e6c35de2e" />
+
 
 <img width="600" height="301" alt="image" src="https://github.com/user-attachments/assets/e998bc3b-7ccf-4e0d-904b-552eeb3bff31" />
 
