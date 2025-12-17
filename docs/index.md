@@ -126,8 +126,6 @@ The folowing graph is a angle vs time experiment with pendulum stabilization to 
 
 The Results obtained after 4 weeks can be seen in the next videos:
 
-[![Ver vídeo](https://img.youtube.com/vi/1MtrXlssoLU?feature=share/0.jpg)](https://youtube.com/shorts/1MtrXlssoLU?feature=share)
-
 <div style="position: relative; padding-bottom: 56.25%; height: 0;">
   <iframe
     src="https://www.youtube.com/embed/1MtrXlssoLU"
@@ -138,12 +136,28 @@ The Results obtained after 4 weeks can be seen in the next videos:
 </div>
 
 
-![video](https://github.com/Technische-Natuurkunde-HvA/inverted-pendulum-international-team-6/blob/main/visuals/videos/Pendulum_stable_V1.mp4)
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe
+    src="https://www.youtube.com/embed/tHJFZTiYXPw"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+  </iframe>
+</div>
 
 As it can be seen in the video after approximately 4 weeks the main objective of the project was sucessfully achived. Because of that the team discussed and decided that the from the additional challenges given the next target would be to make the pendulum stabelize without counterweight. After a week of progress the results achieved can be seen in the next video:
 
-
-![video](https://github.com/Technische-Natuurkunde-HvA/inverted-pendulum-international-team-6/blob/main/visuals/videos/Additional%20Challenges/No_Counterweight_Pendulum.mp4)
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe
+    src="https://www.youtube.com/embed/hepXmcbHj-w"
+    title="YouTube video player"
+    frameborder="0"
+    allowfullscreen
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+  </iframe>
+</div>
 
 Some other challenges that were selected by the team were:
 - Improvement of Design;
@@ -156,9 +170,42 @@ The results of this three challenges can be seen in the next section.
 
 For the improvement of the design it was created new parts that then were printed in a 3D Printer. This new parts give the pendulum more stabilization because of its design, and there are some extras, such as, to spaces to put the arduino and the L298N.
 
-![New Part 1](https://github.com/Technische-Natuurkunde-HvA/inverted-pendulum-international-team-6/blob/main/visuals/files_newparts/Braco%20pendulo.STL)
+<script type="module"
+  src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+</script>
 
-![New Part 2](https://github.com/Technische-Natuurkunde-HvA/inverted-pendulum-international-team-6/blob/main/visuals/files_newparts/base.STL)
+<div style="max-width: 900px; margin: 1rem auto; padding: 0 1rem;">
+  <div style="position: relative; width: 100%; height: min(70vh, 650px); border-radius: 12px; overflow: hidden;">
+    <model-viewer
+      src="https://raw.githubusercontent.com/Technische-Natuurkunde-HvA/inverted-pendulum-international-team-6/main/visuals/files_newparts/Braco%20pendulo.STL"
+      alt="Braço do pêndulo"
+      camera-controls
+      auto-rotate
+      rotation-per-second="20deg"
+      shadow-intensity="1"
+      style="width: 100%; height: 100%; background: #f5f5f5;">
+    </model-viewer>
+  </div>
+</div>
+
+
+<script type="module"
+  src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+</script>
+
+<div style="max-width: 900px; margin: 1rem auto; padding: 0 1rem;">
+  <div style="position: relative; width: 100%; height: min(70vh, 650px); border-radius: 12px; overflow: hidden;">
+    <model-viewer
+      src="https://raw.githubusercontent.com/Technische-Natuurkunde-HvA/inverted-pendulum-international-team-6/main/visuals/files_newparts/base.STL"
+      alt="Base (STL)"
+      camera-controls
+      auto-rotate
+      rotation-per-second="20deg"
+      shadow-intensity="1"
+      style="width: 100%; height: 100%; background: #f5f5f5;">
+    </model-viewer>
+  </div>
+</div>
 
 The data Analysis challenge it was quite simple the team just created a new code that can be acessed by this link ([link](https://github.com/Technische-Natuurkunde-HvA/inverted-pendulum-international-team-6/tree/main/code/Additional_Challenges/Code%20Data%20Analysis))
 
