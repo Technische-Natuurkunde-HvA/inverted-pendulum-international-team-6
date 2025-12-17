@@ -79,11 +79,12 @@ A 12 V power supply feeds the motor driver and motor, while the Arduino is power
 
 # Diagram of all the connections 
 
-![Diagram](https://github.com/Technische-Natuurkunde-HvA/inverted-pendulum-international-team-6/blob/main/visuals/figures/Diagram%20of%20electrical%20connections.png.png)
+<img width="1118" height="566" alt="image" src="https://github.com/user-attachments/assets/8afae4e3-e047-412a-b5a0-9903caf99b37" />
+
 
 # Pendulum Assembly #
 
-![Photo](https://github.com/Technische-Natuurkunde-HvA/inverted-pendulum-international-team-6/blob/main/visuals/figures/1.jpeg)
+<img width="1536" height="2048" alt="image" src="https://github.com/user-attachments/assets/2e315fd5-0aca-4de8-a0f7-1c980f76232a" />
 
 ---
 # 3. Implementation
@@ -96,7 +97,7 @@ A PID controller is implemented to stabilize the pendulum around its unstable eq
 
 To understand how the PID works use this ilustration:
 
-![graph](https://github.com/Technische-Natuurkunde-HvA/inverted-pendulum-international-team-6/blob/main/visuals/figures/PID_Compensation_Animated.gif)
+<img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/1aeaa95d-6887-4f19-bd52-fe6e013f7f9a" />
 
 > ⚠️ **Important:**
 > The ilustration above is a graphic that represents of how changing the PID values will chance the force exerted by the engine over time. 
@@ -119,13 +120,23 @@ After the acquisition is stopped by the user, the recorded data is plotted using
 
 This section presents the experimental evaluation of the inverted pendulum system. Several tests were conducted to assess the controller’s ability to stabilize the pendulum under different conditions.
 
-The folowing graph is a angle vs time experiment to see how the AS5600 works:
+The folowing graph is a angle vs time experiment with pendulum stabilization to see how the AS5600 works:
 
-![graph](https://github.com/Technische-Natuurkunde-HvA/inverted-pendulum-international-team-6/blob/main/visuals/figures/WhatsApp%20Image%202025-11-21%20at%2017.07.28%20(1).jpeg)
+<img width="1600" height="782" alt="image" src="https://github.com/user-attachments/assets/46d1c12b-a394-4a30-960d-66528d814e05" />
 
 The Results obtained after 4 weeks can be seen in the next videos:
 
-![video](https://github.com/Technische-Natuurkunde-HvA/inverted-pendulum-international-team-6/blob/main/visuals/videos/Progress_Week4.mp4)
+[![Ver vídeo](https://img.youtube.com/vi/1MtrXlssoLU?feature=share/0.jpg)](https://youtube.com/shorts/1MtrXlssoLU?feature=share)
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0;">
+  <iframe
+    src="https://www.youtube.com/embed/1MtrXlssoLU"
+    style="position: absolute; top:0; left:0; width:100%; height:100%;"
+    frameborder="0"
+    allowfullscreen>
+  </iframe>
+</div>
+
 
 ![video](https://github.com/Technische-Natuurkunde-HvA/inverted-pendulum-international-team-6/blob/main/visuals/videos/Pendulum_stable_V1.mp4)
 
