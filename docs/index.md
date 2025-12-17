@@ -97,7 +97,22 @@ A PID controller is implemented to stabilize the pendulum around its unstable eq
 
 To understand how the PID works use this ilustration:
 
-<img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/1aeaa95d-6887-4f19-bd52-fe6e013f7f9a" />
+<script type="module"
+  src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+</script>
+
+<div style="max-width: 900px; margin: 1rem auto; padding: 0 1rem;">
+
+  <!-- GIF -->
+  <div style="margin-top: 1.5rem; text-align: center;">
+    <img
+      src="https://raw.githubusercontent.com/Technische-Natuurkunde-HvA/inverted-pendulum-international-team-6/main/visuals/figures/PID_Compensation_Animated.gif"
+      alt="PID Compensation Animation"
+      style="max-width: 100%; height: auto; border-radius: 8px;">
+  </div>
+
+</div>
+
 
 > ⚠️ **Important:**
 > The ilustration above is a graphic that represents of how changing the PID values will chance the force exerted by the engine over time. 
