@@ -1,4 +1,4 @@
-The AS5600_Angle_vs_Time.png is a graph made to showcase the sensor working and giving a live output. The pendulum was moved by hand from side to side to create the graph.
+The AS5600_Angle_vs_Time.png is a graph made to showcase the sensor working and giving a live output. The pendulum was moved by using the Pendulum_Flip_Timer code in from the map code/Progress_Codes.
 
 The Arduino_Connections_Pendulum.png file is used to showcase the connections from the Arduino to the pendulum and other devices.
 
