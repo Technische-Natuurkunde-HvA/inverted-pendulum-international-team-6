@@ -1,3 +1,6 @@
+// This code is used as a test to see if and how the pendulum flips over with a set speed.
+
+
 // Motor control pins
 const int motorPin1 = 10; // IN1 
 const int motorPin2 = 11; // IN2 
